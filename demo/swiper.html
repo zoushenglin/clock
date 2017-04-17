@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>Title</title>
+    <style>
+        html,body{
+            margin:0px;
+        }
+        /*.swiper-container{*/
+            /*height:50px;*/
+            /*margin:0px;*/
+            /*border:1px solid red;*/
+            /*padding:0px 5px;*/
+            /*position: relative;*/
+            /*left:0px;*/
+            /*top:0px;*/
+            /*overflow: hidden;*/
+        /*}*/
+        .swiper-cell{
+            display:inline-block;
+            height:100%;
+            width:30%;
+            position: absolute;
+            top:0px;
+            left:0px;
+            right:0px;
+            bottom:0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container" class="swiper-container">
+        <div class="swiper-cell">
+            <img src="../images/test.jpg" style='width:100%;height: auto;' />
+        </div>
+        <div class="swiper-cell">
+            <img src="../images/test.jpg" style='width:100%;height: auto;' />
+        </div>
+        <div class="swiper-cell">
+            <img src="../images/test.jpg" style='width:100%;height: auto;' />
+        </div>
+        <div class="swiper-cell">
+            <img src="../images/test.jpg" style='width:100%;height: auto;' />
+        </div>
+        <div class="swiper-cell">
+            <img src="../images/test.jpg" style='width:100%;height: auto;' />
+        </div>
+        <div class="swiper-cell">
+            <img src="../images/test.jpg" style='width:100%;height: auto;' />
+        </div>
+        <div class="swiper-cell">
+            <img src="../images/test.jpg" style='width:100%;height: auto;' />
+        </div>
+        <div class="swiper-cell">
+            <img src="../images/test.jpg" style='width:100%;height: auto;' />
+        </div>
+        <div class="swiper-cell">
+            <img src="../images/test.jpg" style='width:100%;height: auto;' />
+        </div>
+        <div class="swiper-cell">
+            <img src="../images/test.jpg" style='width:100%;height: auto;' />
+        </div>
+        <div class="swiper-cell">
+            <img src="../images/test.jpg" style='width:100%;height: auto;' />
+        </div>
+        <div class="swiper-cell">
+            <img src="../images/test.jpg" style='width:100%;height: auto;' />
+        </div>
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swiper.js"></script>
+    <script>
+         $(function(){
+            var swiper = new Swiper({
+                ele:$('#container'),
+                height:300
+            });
+             $('#container .swiper-cell').each(function(){
+                 $(this).bind('click',function(e){
+                     e.stopPropagation();
+                     console.log(1);
+                 })
+             })
+         })
+    </script>
+</body>
+</html>

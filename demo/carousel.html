@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style>
+			.carousel-cell{
+				width:100%;
+				overflow: hidden;
+			}
+			.carousel-img{
+				overflow: hidden;
+				width:100%;
+				display: inline-block;
+				position: absolute;
+				top:0px;
+				left:0px;
+			}
+			.carousel-point{
+				position: absolute;
+				text-align: center;
+				width:100%;
+				top:160px;
+			}
+			.point{
+				display: inline-block;
+				width:30px;
+				height:30px;
+				text-align: center;
+				line-height: 30px;
+				border-radius: 100%;
+				border: 1px solid red;
+			}
+			.point.active{
+				background: red;
+				color: white;
+			}
+			/*.carousel-img .img-object{
+				width:80%;
+				margin-left: 10%;
+				height:auto;
+			}*/
+		</style>
+	</head>
+	<body>
+		<div id="carousel">
+			<div class="carousel-cell">
+				<div class="carousel-img carousel-img-active">
+					<img src="../images/suzhou_coupon_bg.png" class="img-object" />
+				</div>
+				<div class="carousel-img">
+					<img src="../images/xk_coupon_bg.png" class="img-object" />
+				</div>
+				<div class="carousel-img">
+					<img src="../images/yijihuo.png" class="img-object" />
+				</div>
+				<div class="carousel-img">
+					<img src="../images/youhuiquan_bg.png" class="img-object" />
+				</div>
+			</div>
+			
+			<div class="carousel-point">
+				<div class="point active">1</div>
+				<div class="point">2</div>
+				<div class="point">3</div>
+				<div class="point">4</div>
+			</div>
+			
+		</div>
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/carousel.js"></script>
+		<script>
+			$(function(){
+				var carousel = new Carousel({
+					ele:$("#carousel"),
+					height:200,
+					automatic:true,
+					duration:5000
+				});
+			})
+		</script>
+	</body>
+</html>
